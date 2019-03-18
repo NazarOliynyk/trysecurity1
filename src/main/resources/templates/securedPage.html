@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8"/>
+    <title>Secured Page</title>
+</head>
+<body>
+<h1> Page just to try security access </h1>
+<h3>You got in as USER: <p th:text="${userLogged.getUsername()}"></p></h3>
+<h4> The list of your contacts : </h4>
+<ul>
+    <li th:each="contact : ${contacts}">
+        <p> - Contact name : </p>
+        <p th:text="${contact.getContactName()}"></p>
+        <p> - Contact email : </p>
+        <p th:text="${contact.getEmail()}"></p>
+    </li>
+</ul>
+
+<form action="/goToIndexPage" method="get">
+
+    <input type="submit" name="" placeholder="" value="Go To Index Page"/>
+
+</form>
+
+</body>
+</html>

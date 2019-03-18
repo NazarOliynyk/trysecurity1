@@ -56,7 +56,7 @@ public class Security extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/","/login", "saveUser").permitAll() // everyone can access on url: "/", "/home"
+                .antMatchers("/",  "/saveUser").permitAll() // everyone can access on url: "/", "/home"
                 .anyRequest().authenticated() // other url need auth
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .and()
@@ -90,4 +90,3 @@ public class Security extends WebSecurityConfigurerAdapter{
 
     }
 }
-

@@ -20,6 +20,12 @@ public class Contact {
      int id;
      String contactName;
      String email;
+
+    public Contact(String contactName, String email) {
+        this.contactName = contactName;
+        this.email = email;
+    }
+
     @ManyToOne(cascade = CascadeType.DETACH,
             fetch = FetchType.LAZY)
     User user;

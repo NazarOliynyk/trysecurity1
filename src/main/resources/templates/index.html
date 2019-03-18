@@ -6,15 +6,28 @@
 </head>
 <body>
 
+<h2>Add a new contact to your contact list: </h2>
+
 <form action="/save" method="get">
 
-    <input type="submit" name="" placeholder="" value="Save"/>
+    <input type="text" name="contactName" placeholder="Contact name"/>
+    <input type="email" name="email" placeholder="Contact email"/>
+
+    <input type="submit" name="" placeholder="" value="Save Contact"/>
 
 </form>
 
+<h2> To logout : </h2>
 <form th:action="@{/logout}" method="POST">
     <input type="submit" value="Log out"/>
-    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    <!--<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>-->
+</form>
+
+<h2> To see all contact list: </h2>
+<form action="/goToSecuredPage" method="get">
+
+    <input type="submit" name="" placeholder="" value="Go To Secured Page"/>
+
 </form>
 
 </body>
