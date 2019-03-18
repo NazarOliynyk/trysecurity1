@@ -24,6 +24,7 @@ public class Security extends WebSecurityConfigurerAdapter{
     @Autowired
     private UserDetailsService userDetailsService;
 
+
     // the method PasswordEncoder works when configure(AuthenticationManagerBuilder auth is commented
     //securityPart5
     @Bean

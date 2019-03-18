@@ -2,6 +2,7 @@ package oktenweb.trysecurity1.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @EqualsAndHashCode
 @ToString(exclude = {"contacts"})
+@Qualifier("user")
 public class User implements UserDetails {
 
     @Id

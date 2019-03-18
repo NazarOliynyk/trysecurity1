@@ -56,7 +56,7 @@ public class WebConfig implements WebMvcConfigurer {
     public void addViewControllers(ViewControllerRegistry registry) {
 
         // it calls login template having the url /login called
-        registry.addViewController("/login").setViewName("login");
+       // registry.addViewController("/login").setViewName("login");
 
     }
 

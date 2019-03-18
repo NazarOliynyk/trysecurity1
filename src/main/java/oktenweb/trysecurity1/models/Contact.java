@@ -29,5 +29,8 @@ public class Contact {
     @ManyToOne(cascade = CascadeType.DETACH,
             fetch = FetchType.LAZY)
     User user;
+//    @ManyToOne(cascade = CascadeType.DETACH,
+//            fetch = FetchType.LAZY)
+//    Worker worker;
 
 }

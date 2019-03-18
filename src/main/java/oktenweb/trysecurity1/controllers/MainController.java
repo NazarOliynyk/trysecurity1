@@ -35,11 +35,12 @@ public class MainController {
     @Autowired
     UserServiceImpl userServiceImpl;
 
-    User userLogged = new User();
+    private User userLogged = new User();
 
     @GetMapping("/")
     public String index(){
         return "login";
+        //return "loginWorker";
     }
 
     @GetMapping("/login")
@@ -85,9 +86,6 @@ public class MainController {
         //userLogged = userDAO.findByUsername(auth.getName());
          userLogged = (User) userServiceImpl.loadUserByUsername(auth.getName());
 
-        //Contact contact = new Contact();
-        //contact.setContactName("contact security yet another");
-        //contact.setEmail("s222@s.s");
         contact.setUser(userLogged);
         contactService.save(contact);
         System.out.println("Contact saved");
